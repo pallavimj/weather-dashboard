@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="dashboard">
+
+    <header>
+      <h1>☀ Weather Dashboard</h1>
+      <p>Discover weather conditions around the world</p>
+    </header>
+
+    <section class="search-box">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name..."
+        aria-label="City name"
+      >
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <p id="errorMessage" class="error"></p>
+    <p id="loading" class="loading"></p>
+
+    <section id="weatherContainer" hidden>
+
+      <div class="current-weather">
+        <div>
+          <p id="cityName" class="city"></p>
+          <p id="currentDate"></p>
+          <h2 id="temperature"></h2>
+          <p id="description"></p>
+        </div>
+
+        <div id="weatherIcon" class="weather-icon"></div>
+      </div>
+
+      <div class="details">
+        <div class="detail-card">
+          <span>💧 Humidity</span>
+          <h3 id="humidity"></h3>
+        </div>
+
+        <div class="detail-card">
+          <span>💨 Wind Speed</span>
+          <h3 id="wind"></h3>
+        </div>
+
+        <div class="detail-card">
+          <span>🌡 Feels Like</span>
+          <h3 id="feelsLike"></h3>
+        </div>
+      </div>
+
+      <h2 class="forecast-title">5-Day Forecast</h2>
+
+      <div id="forecastContainer" class="forecast-grid"></div>
+
+    </section>
+
+    <footer>
+      <p>Powered by Open-Meteo API</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
